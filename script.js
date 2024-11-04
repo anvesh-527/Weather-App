@@ -8,11 +8,13 @@ const weatherIcon = document.querySelector(".weather-icon");
 async function checkWeather(cityName) {
     const response = await fetch(apiUrl +`${cityName}`+ `&appid=${apiKey}`);
 
-    if(response.status == 404) {
+    if(!response.ok) {
         document.querySelector(".error").style.display = "block";
         document.querySelector(".weather").style.display = "none";
         return;
     }
+
+    document.querySelector(".error").style.display = "none";
 
     var data = await response.json();
 
@@ -34,15 +36,9 @@ async function checkWeather(cityName) {
     } 
 
     document.querySelector(".weather").style.display = "block";
-    
+
 }
 
 searchBtn.addEventListener("click",()=>{
     checkWeather(searchBox.value);
-});
-
-searchBtn.addEventListener("keypress",(event)=>{
-    if(event.key === "Enter") {
-        checkWeather(searchBox.value);
-    }
 });
