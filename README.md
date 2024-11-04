@@ -1,6 +1,9 @@
-# Weather App 🌦️
+# Easy Weather App 🌦️
 
 A simple and user-friendly weather app that provides current weather information for any city worldwide. Built with JavaScript, HTML, CSS, and OpenWeather API.
+
+## Live Demo
+Check out the live app here: [Easy Weather App](https://anvesh-easy-weather.netlify.app/)
 
 ## Features
 - Get real-time weather data
@@ -17,4 +20,4 @@ A simple and user-friendly weather app that provides current weather information
 ## Setup & Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/weather-app.git
+   git clone https://github.com/anvesh-527/weather-app.git
